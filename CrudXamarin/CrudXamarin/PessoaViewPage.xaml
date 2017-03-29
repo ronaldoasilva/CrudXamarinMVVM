@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CrudXamarin.PessoaViewPage">
+    <StackLayout>
+        <ListView x:Name="itemListView" ItemsSource="{Binding Entidades}"  SelectedItem="{Binding CurrentItem}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Label Text="{Binding Nome}"></Label>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button x:Name="btnVoltar" Text="Voltar ao Menu" Command="{Binding VoltarCommand}"></Button>
+    </StackLayout>
+</ContentPage>

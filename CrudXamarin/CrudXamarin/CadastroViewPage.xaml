@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CrudXamarin.CadastroViewPage">
+    <StackLayout>
+        <Label x:Name="lblName" Text="Nome"></Label>
+        <Entry x:Name="entName" Text="{Binding EntidadeAtual.Nome}"></Entry>
+
+        <Label x:Name="lblEmail" Text="Email"></Label>
+        <Entry x:Name="entEmail" Text="{Binding EntidadeAtual.Email}"></Entry>
+
+        <Label x:Name="lblAddress" Text="Endereço"></Label>
+        <Entry x:Name="entAddress" Text="{Binding EntidadeAtual.Endereco}"></Entry>
+
+        <Label x:Name="lblPhone" Text="Telefone"></Label>
+        <Entry x:Name="entPhone" Text="{Binding EntidadeAtual.Telefone}"></Entry>
+
+        <Button x:Name="btnSalvar" Text="Salvar" IsVisible="{Binding SalvarVisibilidade}"  Command="{Binding SalvarCommand}"></Button>
+        <Button x:Name="btnExcluir" Text="Excluir" IsVisible="{Binding ExcluirVisibilidade}" Command="{Binding ExcluirCommand}"></Button>
+        <Button x:Name="btnAtualizar" Text="Atualizar" IsVisible="{Binding AtualizarVisibilidade}" Command="{Binding AtualizarCommand}"></Button>
+    </StackLayout>
+</ContentPage>
